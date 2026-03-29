@@ -1,7 +1,7 @@
 // Central API client — all calls go through here
 // Base URL switches between local dev and deployed backend automatically
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const BASE = import.meta.env.VITE_API_URL || 'https://babcock-backend.onrender.com'
 
 function getToken() {
   return localStorage.getItem('bu_token')

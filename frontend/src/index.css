@@ -1,0 +1,38 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #080C10;
+  --surface: #0F1620;
+  --surface2: #162030;
+  --border: #1E2D42;
+  --gold: #C9993A;
+  --gold2: #E8C06A;
+  --text: #D8E4F0;
+  --muted: #607A96;
+  --red: #E05454;
+  --green: #3DB87A;
+  --blue: #4A9EE0;
+  --purple: #8B5CF6;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 30px #2D6A2D30; }
+  50%       { box-shadow: 0 0 60px #2D6A2D55; }
+}
+
+.fade-up { animation: fadeUp 0.4s ease both; }
